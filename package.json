@@ -17,8 +17,6 @@
     "react-dom": "^18.2.0"
   },
   "browserslist": [
-    "defaults and supports es6-module",
-    "maintained node versions",
-    "last 2 versions"
+    "last 2 chrome versions"
   ]
 }
