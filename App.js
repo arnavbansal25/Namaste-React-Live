@@ -51,7 +51,7 @@ const Header = (props) => {
 const cdnURL =
   "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/";
 
-const RestaurantList = ({
+const RestaurantCard = ({
   name,
   cuisines,
   cloudinaryImageId,
@@ -71,7 +71,7 @@ const Body = () => {
   return (
     <div className="restaurant-list">
       {restaurantList?.map((restaurant) => {
-        return <RestaurantList {...restaurant.data} key={restaurant.data.id} />;
+        return <RestaurantCard {...restaurant.data} key={restaurant.data.id} />;
       })}
     </div>
   );
