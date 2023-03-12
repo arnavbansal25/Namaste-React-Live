@@ -1,4 +1,4 @@
-Chapter 1 Content:
+Chapter 2 Content:
 1. Igniting our app without create-react-app
 2. Creating a custom create-react-app with minimalistic requirements
 3. Using react as a package
