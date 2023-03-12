@@ -33,7 +33,6 @@ const Title = () => {
 };
 
 const Header = (props) => {
-  console.log("ggg0", props);
   return (
     <div className="header">
       <Title />
