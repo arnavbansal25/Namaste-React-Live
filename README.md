@@ -1,5 +1,5 @@
-Chapter 4 Content:
-1. React Fragments
-2. Different way to pass props (spread operator also convered)
-3. Config Driven UI
-4. Virtual DOM (Reconciliation, Importance of using KEYS)
+Chapter 5 Content:
+1. Component Structuring: Clean and Maintainable Code
+2. Default Import vs Named Import/Export
+3. Star import (*)
+4. Hooks
