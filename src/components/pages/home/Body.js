@@ -24,8 +24,8 @@ const Body = () => {
         "https://www.swiggy.com/dapi/restaurants/list/v5?lat=26.9550442&lng=75.71040959999999&page_type=DESKTOP_WEB_LISTING"
       );
       const json = await data.json();
-      setAllRestaurants(json?.data?.cards?.[0]?.data?.data?.cards);
-      setFilteredRestaurants(json?.data?.cards?.[0]?.data?.data?.cards);
+      setAllRestaurants(json?.data?.cards?.[2]?.data?.data?.cards);
+      setFilteredRestaurants(json?.data?.cards?.[2]?.data?.data?.cards);
     } catch (err) {
       console.log(err);
     }

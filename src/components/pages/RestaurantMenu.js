@@ -31,7 +31,12 @@ function RestaurantMenu() {
       <div>
         <h1>Restaurnt Id: {id}</h1>
         <h2>Name: {restaurantInfo?.name}</h2>
-        <h2>Rating: {restaurantInfo?.avgRating} stars</h2>
+        <h2>
+          Rating:{" "}
+          {restaurantInfo?.avgRating
+            ? restaurantInfo?.avgRating + " stars"
+            : "Too Few Ratings"}
+        </h2>
         <img src={IMG_CDN_URL + restaurantInfo?.cloudinaryImageId} />
       </div>
       <div>
