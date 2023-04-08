@@ -1,6 +1,7 @@
-Chapter 7 Content:
-1. Routing using react-router-dom
-2. Single Page Application
-3. Routing
-4. Nested Routes
-5. Dynamic Routing
+Chapter 8 Content:
+1. Class Components
+2. Lifecycle Methods
+3. Constructor, Render, ComponentDidMount
+4. componentDidUpdate, componentWillUnmount
+5. return in callback of useEffect
+6. Importance of cleaning your mess
