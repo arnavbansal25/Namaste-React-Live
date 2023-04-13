@@ -1,5 +1,5 @@
-import { IMG_CDN_URL } from "../../common/constants";
 import { Link } from "react-router-dom";
+import { IMG_CDN_URL } from "../../../utils/constants";
 
 const RestaurantCard = ({
   id,

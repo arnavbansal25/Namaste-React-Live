@@ -1,7 +1,5 @@
-Chapter 8 Content:
-1. Class Components
-2. Lifecycle Methods
-3. Constructor, Render, ComponentDidMount
-4. componentDidUpdate, componentWillUnmount
-5. return in callback of useEffect
-6. Importance of cleaning your mess
+Chapter 9 Content:
+1. Custom Hooks
+2. Checking online/offline status
+3. Chunking in Action / On Demand Loading
+4. Dynamic Import (lazy loading) and using Suspense
