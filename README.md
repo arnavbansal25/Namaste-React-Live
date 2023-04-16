@@ -1,5 +1,3 @@
 Chapter 9 Content:
-1. Custom Hooks
-2. Checking online/offline status
-3. Chunking in Action / On Demand Loading
-4. Dynamic Import (lazy loading) and using Suspense
+1. Different ways to applying styling in React
+2. Tailwind CSS in action

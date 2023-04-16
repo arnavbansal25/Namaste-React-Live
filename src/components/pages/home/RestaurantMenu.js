@@ -10,7 +10,7 @@ function RestaurantMenu() {
   const { restaurantInfo, menu } = useGetRestaurantMenu(id);
 
   return (
-    <div style={{ display: "flex" }}>
+    <div className="flex bg-pink-50 m-2 p-2">
       <div>
         <h1>Restaurnt Id: {id}</h1>
         <h2>Name: {restaurantInfo?.name}</h2>
@@ -24,7 +24,7 @@ function RestaurantMenu() {
       </div>
       <div>
         {menu?.map((item) => (
-          <div key={item?.card?.info?.id} style={{ display: "flex" }}>
+          <div key={item?.card?.info?.id} className="flex">
             <div>{item?.card?.info?.name}</div>
             <div>&nbsp; {item?.card?.info?.price}</div>
           </div>
