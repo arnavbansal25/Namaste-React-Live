@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import RestaurantCard from "./RestaurantCard";
 import { filterData } from "../../../utils/utils";
 import Shimmer from "../../../utils/components/Shimmer";
 import useIsOnline from "../../../utils/hooks/useIsOnline";
 import useGetAllRestaurants from "../../../utils/hooks/useGetAllRestaurants";
+import UserContext from "../../../utils/UserContext";
 
 const Body = () => {
   const [searchText, setSearchText] = useState("");
@@ -13,6 +14,8 @@ const Body = () => {
   const [filteredRestaurants, setFilteredRestaurants] = useGetAllRestaurants();
 
   const isOnline = useIsOnline();
+
+  const { user, setUser } = useContext(UserContext);
 
   // an early return
   if (!isOnline) {
@@ -37,8 +40,16 @@ const Body = () => {
             setFilteredRestaurants(data);
           }}
         >
-          Seach
+          Search
         </button>
+        <input
+          value={user.name}
+          onChange={(e) => setUser({ ...user, name: e.target.value })}
+        />
+        <input
+          value={user.email}
+          onChange={(e) => setUser({ ...user, email: e.target.value })}
+        />
       </div>
       <div className="flex flex-wrap">
         {filteredRestaurants?.length === 0 ? (

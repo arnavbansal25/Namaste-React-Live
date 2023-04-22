@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from "react";
+import React, { Suspense, lazy, useContext, useState } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
@@ -11,15 +11,24 @@ import ErrorPage from "./components/pages/ErrorPage";
 import Example from "./components/pages/about/Example";
 import ExampleClass from "./components/pages/about/ExampleClass";
 import RestaurantMenu from "./components/pages/home/RestaurantMenu";
+import UserContext from "./utils/UserContext";
 
 const Instamart = lazy(() => import("./components/pages/Instamart/Instamart"));
 
 const AppLayout = () => {
+  const [user, setUser] = useState({
+    name: "Arnav",
+    email: "arnav@gmail.com",
+  });
+  // let's assume this is the value we fetched from an api call
+
   return (
     <>
-      <Header />
-      <Outlet />
-      <Footer />
+      <UserContext.Provider value={{ user: user, setUser: setUser }}>
+        <Header />
+        <Outlet />
+        <Footer />
+      </UserContext.Provider>
     </>
   );
 };
