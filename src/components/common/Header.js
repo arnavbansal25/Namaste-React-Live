@@ -1,8 +1,10 @@
-import React, { useState, useContext } from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { LOGO_CDN } from "../utils/constants";
-import useIsOnline from "../utils/hooks/useIsOnline";
-import UserContext from "../utils/UserContext";
+import React, { useState, useContext } from "react";
+
+import { LOGO_CDN } from "../../utils/constants";
+import UserContext from "../../utils/UserContext";
+import useIsOnline from "../../utils/hooks/useIsOnline";
 
 export const Title = () => {
   return (
@@ -18,6 +20,8 @@ const Header = (props) => {
   const isOnline = useIsOnline();
 
   const { user } = useContext(UserContext);
+
+  const cartItems = useSelector((store) => store.cart.items);
 
   return (
     <div className="flex justify-between bg-pink-50 shadow-lg sm:bg-blue-50 md:bg-yellow-50">
@@ -36,7 +40,10 @@ const Header = (props) => {
             <Link to="/contact">Contact</Link>
           </li>
           <li className="px-2">
-            <Link to="/instamart">Cart</Link>
+            <Link to="/instamart">Instamart</Link>
+          </li>
+          <li className="px-2">
+            <Link to="/cart">Cart "{cartItems.length}"</Link>
           </li>
           <div>{isOnline ? "🟢" : "🔴"}</div>
           <span className="p-2 font-bold text-red-900">{user.name}</span>

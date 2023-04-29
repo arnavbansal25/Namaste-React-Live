@@ -1,9 +1,9 @@
-Chapter 11 Content:
+Chapter 12 Content:
 
-1. Prop Drilling
-2. React Dev Tools in Action - Components & Profiler
-3. Lifting the state up
-4. Accordion: Basic and Collapsable
-5. React Context
-6. Context Provider
-7. Modifying the Context
+1. Redux Toolkit (rtk)
+2. Actions-Reducers
+3. Redux Store - Configure
+4. Slice - Create
+5. Subscribing to the store
+6. Modifying the Store - dispatching an Action
+7. Adding Cart funtionality in our food application

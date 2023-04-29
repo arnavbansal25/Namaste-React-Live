@@ -14,7 +14,10 @@ const useGetAllRestaurants = () => {
         `${SWIGGY_URL}restaurants/list/v5?lat=26.9550442&lng=75.71040959999999&page_type=DESKTOP_WEB_LISTING`
       );
       const json = await data.json();
-      setRestaurantList(json?.data?.cards?.[2]?.data?.data?.cards);
+      setRestaurantList(
+        json?.data?.cards?.[2]?.data?.data?.cards ||
+          json?.data?.cards?.[1]?.data?.data?.cards
+      );
     } catch (err) {
       console.log(err);
     }
